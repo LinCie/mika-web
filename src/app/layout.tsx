@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import "@fontsource-variable/noto-serif";
+import "@fontsource-variable/roboto";
+
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
   title: "Mika",
@@ -14,8 +16,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="font-noto">{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body className="font-roboto text-foreground bg-background">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
