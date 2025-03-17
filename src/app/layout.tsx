@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="font-roboto text-foreground bg-background">
+      <body className="font-roboto text-foreground">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

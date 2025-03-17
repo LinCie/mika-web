@@ -152,3 +152,12 @@
     }
   }
 }
+
+:root {
+  --bg-image: url("/background.webp");
+} 
+
+body {
+  background: var(--bg-image) no-repeat center center fixed;
+  background-size: cover;
+}
