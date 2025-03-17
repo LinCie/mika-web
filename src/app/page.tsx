@@ -51,7 +51,7 @@ function HeroSection() {
             animate={{ scale: [1, 1.025, 1, 0.975, 1] }}
             transition={{
               ease: "linear",
-              duration: 5,
+              duration: 3.5,
               repeat: Infinity,
             }}
           />
